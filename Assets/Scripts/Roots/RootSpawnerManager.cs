@@ -1,34 +1,69 @@
 using UnityEngine;
-
+using System.Collections;
+using System.Collections.Generic;
 public class RootSpawnerManager : MonoBehaviour {
-  private float spanwOffsetX_ = 2.0f;
-  private int spawnSide_;
     [SerializeField] private GameObject vitPrefab_;
-    [SerializeField] private int maxSpawnCount=10;
-    private int enemysCount;
+    [SerializeField] private int maxAnimationCount = 10;
+    [SerializeField] private SpriteRenderer root1;
+    [SerializeField] private SpriteRenderer root2;
+    [SerializeField] private List<Sprite> _root1;
+    [SerializeField] private List<Sprite> _root2;
+    [SerializeField] private Transform root1Spwan;
+    [SerializeField] private Transform root2Spwan;
+
+    private int currentRoot;
+
+    private int rootCountToInstace;
+
+    private int addRoot = 0;
+
+    private int AddTO;
+    private Transform spawnPoint;
 
     void Start(){
-        GameManager.Instance.AddDificultAction += UpdateDifficult;
-        enemysCount = maxSpawnCount;
+        GameManager.Instance.EnemyHit += UpdateDifficult;
+        GameManager.Instance.EnemyDie += UpdateAnims;
+
+        rootCountToInstace = maxAnimationCount;
+        currentRoot = addRoot;
+        root1.sprite = _root1[currentRoot];
+        root2.sprite = _root2[currentRoot];
+        AddTO = Random.Range(0, 2);
     }
     private void UpdateDifficult()
     {
-        if (GameManager.Instance.EnemiesCount!=0 && GameManager.Instance.EnemiesCount % maxSpawnCount == 0)
+        AddCount(-1);
+        rootCountToInstace = maxAnimationCount + GameManager.Instance.currentDifficulty_;    
+    }
+    void UpdateAnims()
+    {
+        AddCount(1); 
+        if (GameManager.Instance.EnemiesCount != 0 && GameManager.Instance.EnemiesCount % rootCountToInstace == 0)
         {
-            maxSpawnCount = enemysCount + GameManager.Instance.currentDifficulty_;
             GameManager.Instance.EnemiesCount = 0;
             SetSpawnVitamin();
+            addRoot = 0;
+            AddTO = Random.Range(0, 2);
         }
     }
-
-  void SetSpawnVitamin(){
-    switch(Random.Range(0, 2)){
-      case 0: spawnSide_ = 1; break;
-      case 1: spawnSide_ = -1; break;
+    void AddCount(int value)
+    {
+        addRoot+=value;
+        if (AddTO == 0)
+        {
+            currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _root1.Count - 1);
+            root1.sprite = _root1[currentRoot];
+        }
+        else
+        {
+            currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _root2.Count - 1);
+            root2.sprite = _root2[currentRoot];
+        }
     }
-    Vector3 spawnPosition = new Vector3((GameManager.Instance.screenWidth_ * spawnSide_) - (spanwOffsetX_ * spawnSide_), -3.0f, 0.0f);
-    Instantiate(vitPrefab_, spawnPosition, Quaternion.identity);
-  }
-
+    void SetSpawnVitamin(){
+        if (AddTO == 0) spawnPoint = root1Spwan;
+        else spawnPoint = root2Spwan;
+        Instantiate(vitPrefab_, spawnPoint.position, Quaternion.identity);
+    }
 
 }

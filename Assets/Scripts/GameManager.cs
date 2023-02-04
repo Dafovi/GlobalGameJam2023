@@ -11,16 +11,18 @@ public class GameManager : MonoBehaviour {
     public Vector3 rightScreen_;
     public float screenHeight_;
     public float screenWidth_;
-    public Action AddDificultAction;
+    public Action EnemyHit;
+    public Action EnemyDie;
 
 
     [Header("Fungis life")]
     [SerializeField] private int fungiLifes = 5;
     [SerializeField] private int fungiSisterLifes = 5;
     [SerializeField,Space(10)]private int enemyDefeatCount;
+    [SerializeField] private int acidFallCount;
 
     public bool GameOver {get; set;}
-    public int EnemiesCount { get; set; }
+    public int EnemiesCount {get; set;}
 
     public int vitaminCount_;
 
@@ -39,7 +41,7 @@ public class GameManager : MonoBehaviour {
         if (currentDifficulty_ < 10)
         {
             currentDifficulty_++;
-            AddDificultAction?.Invoke();
+            EnemyHit?.Invoke();
         }
     }
     void Update() {
@@ -50,22 +52,26 @@ public class GameManager : MonoBehaviour {
     }
     public void FungiDamage()
     {
-        if (fungiLifes > 0)
+        if (fungiLifes > 1)
             fungiLifes--;
         else
             GameOver = true;
     }
     public void FungiSisterDamage()
     {
-        if (fungiSisterLifes > 0)
+        if (fungiSisterLifes > 1)
             fungiSisterLifes--;
         else
             GameOver = true;
     }
-    public void AddEnemyDefeatCount()
+    public void AddAnimationCount()
     {
-        AddDificultAction?.Invoke();
+        EnemyDie?.Invoke();
         enemyDefeatCount++;
         EnemiesCount++;
+    }
+    public static float Remap(float value, float from1, float to1, float from2, float to2)
+    {
+        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
 }

@@ -122,19 +122,20 @@ public class FungiController : MonoBehaviour
     {
         if (_enemy.GetComponent<AcidBehaviour>()&&fungiState==States.state1)
         {
-            GameManager.Instance.AddEnemyDefeatCount();
+            GameManager.Instance.AddAnimationCount();
         }
         else if (_enemy.GetComponent<BugBehaviour>() && fungiState == States.state2)
         {
-            GameManager.Instance.AddEnemyDefeatCount();
+            GameManager.Instance.AddAnimationCount();
         }
         else if(_enemy.GetComponent<SlimeBehaviour>() && fungiState == States.state3)
         {
-            GameManager.Instance.AddEnemyDefeatCount();
+            GameManager.Instance.AddAnimationCount();
         }
         else
         {
             GetDamage();
+            GameManager.Instance.AddDificult();
         }
 
         _enemy.SetActive(false);

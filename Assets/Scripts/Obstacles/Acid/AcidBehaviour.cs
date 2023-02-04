@@ -25,6 +25,10 @@ public class AcidBehaviour : MonoBehaviour {
     if(collider.gameObject.GetComponent<IDamageable>() != null){
       collider.gameObject.GetComponent<IDamageable>().TakeDamage();
     }
+        if (collider.CompareTag("Ground"))
+        {
+            GameManager.Instance.AddDificult();
+        }
     hasFallen_ = true;
     gameObject.SetActive(false);
   }
