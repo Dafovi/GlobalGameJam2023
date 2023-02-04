@@ -84,7 +84,7 @@ public class FungiController : MonoBehaviour
     private void MoveAnim()
     {
         currentAnim.SetBool("Walk", horizontalMovement != 0 ? true : false);
-        currentFungi.GetComponent<SpriteRenderer>().flipX = rb.velocity.x < 0 ? true : false;   
+        currentFungi.GetComponent<SpriteRenderer>().flipX = horizontalMovement < 0 ? true : false;   
     }
     private void ChangeState()
     {
@@ -113,7 +113,6 @@ public class FungiController : MonoBehaviour
         }
         if (collision.CompareTag("Vitamina"))
         {
-            GameManager.Instance.vitaminCount_++;
             GameManager.Instance.AddDificult();
             GameManager.Instance.AddVitaminas();
             Destroy(collision.gameObject);

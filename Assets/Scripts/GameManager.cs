@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour {
 
@@ -20,16 +21,13 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private int fungiLifes = 5;
     [SerializeField] private int fungiSisterLifes = 5;
     [SerializeField,Space(10)]private int enemyDefeatCount;
-    [SerializeField] private int acidFallCount;
-    [SerializeField] private GameObject behaviors;
     [SerializeField] private int maxVitaminas=5;
+    [SerializeField] private UnityEvent OnEndGame;
     private int currentVitaminas;
-    
+
 
     public bool GameOver {get; set;}
     public int EnemiesCount {get; set;}
-
-    public int vitaminCount_;
 
     private void Awake()
     {
@@ -80,7 +78,7 @@ public class GameManager : MonoBehaviour {
         currentVitaminas++;
         if (currentVitaminas == maxVitaminas)
         {
-            behaviors.SetActive(false);
+            OnEndGame.Invoke();
         }
     }
     public static float Remap(float value, float from1, float to1, float from2, float to2)

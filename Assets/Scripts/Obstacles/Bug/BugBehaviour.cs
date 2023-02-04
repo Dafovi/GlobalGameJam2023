@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BugBehaviour : MonoBehaviour {
 
-  private FungiSisterController sisterFungiRef_;
+  private NewSisterController sisterFungiRef_;
   [SerializeField, Range(1.0f, 10.0f)] private float bugSpeed_;
 
   void Start() {
-    sisterFungiRef_ = FindObjectOfType<FungiSisterController>();
+    sisterFungiRef_ = FindObjectOfType<NewSisterController>();
       
   }
 
