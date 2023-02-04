@@ -13,12 +13,14 @@ public class GameManager : MonoBehaviour {
     public float screenWidth_;
     public Action AddDificultAction;
 
+
     [Header("Fungis life")]
     [SerializeField] private int fungiLifes = 5;
     [SerializeField] private int fungiSisterLifes = 5;
+    [SerializeField,Space(10)]private int enemyDefeatCount;
 
     public bool GameOver {get; set;}
-
+    public int EnemiesCount { get; set; }
     private void Awake()
     {
         Instance = this;
@@ -56,5 +58,11 @@ public class GameManager : MonoBehaviour {
             fungiSisterLifes--;
         else
             GameOver = true;
+    }
+    public void AddEnemyDefeatCount()
+    {
+        AddDificultAction?.Invoke();
+        enemyDefeatCount++;
+        EnemiesCount++;
     }
 }

@@ -121,15 +121,15 @@ public class FungiController : MonoBehaviour
     {
         if (_enemy.GetComponent<AcidBehaviour>()&&fungiState==States.state1)
         {
-            //anim
+            GameManager.Instance.AddEnemyDefeatCount();
         }
         else if (_enemy.GetComponent<BugBehaviour>() && fungiState == States.state2)
         {
-            //anim
+            GameManager.Instance.AddEnemyDefeatCount();
         }
         else if(_enemy.GetComponent<SlimeBehaviour>() && fungiState == States.state3)
         {
-            //anim
+            GameManager.Instance.AddEnemyDefeatCount();
         }
         else
         {
@@ -142,6 +142,7 @@ public class FungiController : MonoBehaviour
     {
         currentAnim.SetTrigger("Damage");
         GameManager.Instance.FungiDamage();
+        Debug.Log("Damage");
     }
     public enum States
     {
