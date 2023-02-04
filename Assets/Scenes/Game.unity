@@ -456,7 +456,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83153355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92, y: -2.25, z: 0}
+  m_LocalPosition: {x: 1.92, y: -3.75, z: 0}
   m_LocalScale: {x: 0.5, y: 0.6, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -533,7 +533,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &132572644
 Transform:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132572643}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ea2019bec1196b43ac7977ad0a44a85, type: 3}
   m_Name: 
@@ -570,13 +570,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 132572643}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4578a94999fd9745a407359416f00a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn_: 1
-  currenTime: 0
+  timeToSpawn_: 3
+  currenTime: 6
 --- !u!1 &146893234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1407,7 +1407,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717507351}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38, y: -1.95, z: 0}
+  m_LocalPosition: {x: 0.38, y: -3.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1504,7 +1504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &885311083
 Transform:
   m_ObjectHideFlags: 0
@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885311082}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e593cce3d8ae02741b56fd4dadb46ebc, type: 3}
   m_Name: 
@@ -1535,8 +1535,9 @@ MonoBehaviour:
   sisterFungiRef_: {fileID: 83153355}
   slimePrefab_: {fileID: 102333336701620353, guid: edda4d8b5f9b8d54cb8b562c28a0c618, type: 3}
   spawnDirection_: 0
-  minTimeToSpawn_: 3
-  maxTimeToSpawn_: 6
+  minTimeToSpawn_: 10
+  maxTimeToSpawn_: 12
+  difficultToSpawn_: 2
 --- !u!1 &962525886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,7 +1934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1337394947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,7 +1942,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337394946}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ea2019bec1196b43ac7977ad0a44a85, type: 3}
   m_Name: 
@@ -1970,14 +1971,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1337394946}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4da87a1a978f0744187265a35596de85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeToSpawn_: 5
-  maxTimeToSpawn_: 6
-  dificultyToSpawn_: 0
+  minTimeToSpawn_: 10
+  maxTimeToSpawn_: 12
+  dificultyToSpawn_: 4
 --- !u!1 &1368308969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,8 +2642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vitPrefab_: {fileID: 9065948789955272021, guid: 5d2aa4ca7e15a2943a6370ef5c13807f, type: 3}
-  maxTimeToSpawn_: 2
-  minTimeToSpawn_: 0
+  maxSpawnCount: 10
 --- !u!4 &1549667579
 Transform:
   m_ObjectHideFlags: 0
@@ -2740,6 +2740,8 @@ MonoBehaviour:
   screenWidth_: 0
   fungiLifes: 5
   fungiSisterLifes: 5
+  enemyDefeatCount: 0
+  vitaminCount_: 0
 --- !u!1 &1794813897
 GameObject:
   m_ObjectHideFlags: 0

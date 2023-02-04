@@ -28,7 +28,7 @@ public class AcidSpawnManager : MonoBehaviour {
 
   void SetSpawnPoint(){
     float y = Camera.main.orthographicSize;
-    float x = y * Camera.main.aspect;
+    float x = y * Camera.main.aspect - 2.0f;
     float final_x = Random.Range(-x, x);
 
     Vector3 new_position = new Vector3(final_x, y, 0.0f);

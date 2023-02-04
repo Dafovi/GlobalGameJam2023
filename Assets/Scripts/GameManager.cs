@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour {
 
     public bool GameOver {get; set;}
     public int EnemiesCount { get; set; }
+
+    public int vitaminCount_;
+
     private void Awake()
     {
         Instance = this;

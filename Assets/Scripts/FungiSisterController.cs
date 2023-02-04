@@ -26,14 +26,15 @@ public class FungiSisterController : MonoBehaviour, IDamageable {
 
   void Update() {
 
-    if(Input.GetButtonDown("Jump")){
+    if(GameManager.Instance.vitaminCount_ > 2){
       isDistracted_ = true;
     }
 
     if(!isDistracted_){
       float distance = Vector2.Distance(transform.position, fungiControllerRef_.transform.position);
       if(distance > minDistanceToMove_){
-        transform.position = Vector2.Lerp(transform.position, fungiControllerRef_.transform.position, Time.deltaTime);
+        Vector3 destPosition = new Vector3(fungiControllerRef_.transform.position.x, transform.position.y, transform.position.z);
+        transform.position = Vector2.Lerp(transform.position, destPosition, Time.deltaTime);
       } 
     }
 
@@ -56,10 +57,11 @@ public class FungiSisterController : MonoBehaviour, IDamageable {
     }
     isSorted_ = true;
     isMoving_ = true;
+    GameManager.Instance.vitaminCount_ = 0;
   }
 
   void MoveToDistraction(){
-    transform.position = Vector2.MoveTowards(transform.position,new Vector2 (distractionPosition_.x, fungiControllerRef_.transform.position.y), distractionSpeed_ * Time.deltaTime);
+    transform.position = Vector2.MoveTowards(transform.position,new Vector2 (distractionPosition_.x, transform.position.y), distractionSpeed_ * Time.deltaTime);
     if(Vector2.Distance(transform.position, distractionPosition_) < 0.2f){
       isMoving_ = false;
     }
@@ -73,7 +75,7 @@ public class FungiSisterController : MonoBehaviour, IDamageable {
   }
 
   public void TakeDamage(){
-        GameManager.Instance.FungiSisterDamage();
+    GameManager.Instance.FungiSisterDamage();
   }
 
 }

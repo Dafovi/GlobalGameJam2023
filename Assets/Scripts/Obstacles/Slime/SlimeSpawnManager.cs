@@ -14,6 +14,8 @@ public class SlimeSpawnManager : MonoBehaviour {
   [SerializeField] private float minTimeToSpawn_;
   [SerializeField] private float maxTimeToSpawn_;
 
+  [SerializeField] private int difficultToSpawn_;
+
   void Start() {
     gameManagerRef_ = FindObjectOfType<GameManager>();
 
@@ -21,7 +23,7 @@ public class SlimeSpawnManager : MonoBehaviour {
   }
 
   void Update(){
-    if(gameManagerRef_.currentDifficulty_ > 2){
+    if(gameManagerRef_.currentDifficulty_ > difficultToSpawn_){
       if(currentTimeToSpawn_ > nextTimeToSpawn_){
         SetSlimeSpawn();
       }
@@ -40,6 +42,9 @@ public class SlimeSpawnManager : MonoBehaviour {
 
     spawnPosition_ = new Vector3(gameManagerRef_.screenWidth_ * spawnDirection_, -3.0f, 0.0f);
     Instantiate(slimePrefab_, spawnPosition_, Quaternion.identity);
+
+    minTimeToSpawn_ -= (0.15f * GameManager.Instance.currentDifficulty_);
+    maxTimeToSpawn_ -= (0.15f * GameManager.Instance.currentDifficulty_);
 
     nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
     currentTimeToSpawn_ = 0.0f;

@@ -40,6 +40,9 @@ public class BugSpawnerManager : MonoBehaviour {
     Vector3 spanwPosition = new Vector3(spawn_x, gameManagerRef_.screenHeight_ - spanwOffsetY, 0.0f);
     bugPool_.GetFromPool(spanwPosition);
 
+    minTimeToSpawn_ -= (0.15f * GameManager.Instance.currentDifficulty_);
+    maxTimeToSpawn_ -= (0.15f * GameManager.Instance.currentDifficulty_);
+
     nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
     currentTimeToSpawn_ = 0.0f;
   }

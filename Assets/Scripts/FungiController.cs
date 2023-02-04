@@ -88,7 +88,7 @@ public class FungiController : MonoBehaviour
     }
     private void ChangeState()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetMouseButtonDown(0))
         {
             if (state > 0)
                 state--;
@@ -96,7 +96,7 @@ public class FungiController : MonoBehaviour
                 state = System.Enum.GetNames(typeof(States)).Length-1;
             FungiState();
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButtonDown(1))
         {
             if (state < System.Enum.GetNames(typeof(States)).Length-1)
                 state++;
@@ -113,6 +113,7 @@ public class FungiController : MonoBehaviour
         }
         if (collision.CompareTag("Vitamina"))
         {
+            GameManager.Instance.vitaminCount_++;
             GameManager.Instance.AddDificult();
             Destroy(collision.gameObject);
         }
