@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FungiSisterController : MonoBehaviour {
+public class FungiSisterController : MonoBehaviour, IDamageable {
 
   [SerializeField] private List<GameObject> distractionList_;
 
@@ -43,6 +43,9 @@ public class FungiSisterController : MonoBehaviour {
     if(isSorted_ && isDistracted_ && isMoving_)
       MoveToDistraction();
 
+    // if(isDistracted_ && isSorted_)
+      // RecoverSister();
+
   }
 
   void SortFurtherDistraction(){
@@ -63,6 +66,17 @@ public class FungiSisterController : MonoBehaviour {
     if(Vector2.Distance(transform.position, distractionPosition_) < 0.2f){
       isMoving_ = false;
     }
+  }
+
+  void OnTriggerEnter2D(Collider2D collider){
+    if(collider.gameObject.GetComponent<FungiController>() != null){
+      isDistracted_ = false;
+      isSorted_ = false;
+    }
+  }
+
+  public void TakeDamage(){
+    gameObject.SetActive(false);
   }
 
 }
