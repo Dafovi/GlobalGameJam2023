@@ -7,7 +7,7 @@ public class FungiController : MonoBehaviour
     [SerializeField] private States fungiState;
     [SerializeField] private float speed;
 
-    [Header("FungiStatesSprites")]
+    [Header("FungiStatesGameObjects")]
     [SerializeField] private GameObject fungi1;
     [SerializeField] private GameObject fungi2;
     [SerializeField] private GameObject fungi3;
@@ -15,71 +15,76 @@ public class FungiController : MonoBehaviour
     private Rigidbody2D rb;
     private float state;
     private GameObject currentFungi;
+    private Animator currentAnim;
     private float horizontalMovement;
-    private Vector2 limits;
     void Start()
     {
-        state = (int)fungiState;
         SetFungiState();
         rb = GetComponent<Rigidbody2D>();
-        limits = Camera.main.WorldToViewportPoint(transform.position);
     }
     void Update()
     {
         Movement();
         ChangeState();
+        MoveAnim();
     }
-    //[ContextMenu("SetFungi")]
+    [ContextMenu("SetFungiState")]
     private void SetFungiState()
+    {
+        state = (int)fungiState;
+        FungiState();
+    }
+    private void FungiState()
     { 
         switch (state)
         {
             case 0:
                 fungiState = States.state1;
-                fungi1.SetActive(true);
-                fungi2.SetActive(false);
-                fungi3.SetActive(false);
-                currentFungi = fungi1;
+                StartCoroutine(ChangeState(fungi1));
                 break;
             case 1:
                 fungiState = States.state2;
-                fungi1.SetActive(false);
-                fungi2.SetActive(true);
-                fungi3.SetActive(false);
-                currentFungi = fungi2;
+                StartCoroutine(ChangeState(fungi2));
                 break;
             case 2:
                 fungiState = States.state3;
-                fungi1.SetActive(false);
-                fungi2.SetActive(false);
-                fungi3.SetActive(true);
-                currentFungi = fungi3;
+                StartCoroutine(ChangeState(fungi3));
                 break;
         }
     }
+    private IEnumerator ChangeState(GameObject _newFungi)
+    {
+        if (!currentFungi)
+        {
+            if (fungiState == States.state1) currentFungi = fungi1;
+            if (fungiState == States.state2) currentFungi = fungi2;
+            if (fungiState == States.state3) currentFungi = fungi3;
+
+            currentAnim= currentFungi.GetComponent<Animator>();
+        }
+        currentAnim.SetTrigger("Transform");
+        //yield return new WaitUntil(() => currentAnim.GetCurrentAnimatorStateInfo(0).IsName("Exit"));
+        fungi1.SetActive(false);
+        fungi2.SetActive(false);
+        fungi3.SetActive(false);
+        currentFungi = _newFungi;
+        currentFungi.SetActive(true);
+        currentAnim = currentFungi.GetComponent<Animator>();
+        ////
+        yield return null;
+    }
     private void Movement()
     {
-        horizontalMovement = Input.GetAxisRaw("Horizontal");
-        rb.velocity=new Vector2(horizontalMovement * speed,rb.velocity.y);
+        if (!currentAnim.GetCurrentAnimatorStateInfo(0).IsName("Transform"))
+        {
+            horizontalMovement = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
+        }
     }
-    private void Animations()
+    private void MoveAnim()
     {
-        if (horizontalMovement != 0)
-        {
-            currentFungi.GetComponent<Animator>().SetBool("Walk",true);
-        }
-        else
-        {
-            currentFungi.GetComponent<Animator>().SetBool("Walk", false);
-        }
-        if (rb.velocity.x < 0)
-        {
-            currentFungi.GetComponent<SpriteRenderer>().flipX = true;
-        }
-        if (rb.velocity.x > 0)
-        {
-            currentFungi.GetComponent<SpriteRenderer>().flipX = false;
-        }
+        currentAnim.SetBool("Walk", horizontalMovement != 0 ? true : false);
+        currentFungi.GetComponent<SpriteRenderer>().flipX = rb.velocity.x < 0 ? true : false;   
     }
     private void ChangeState()
     {
@@ -89,7 +94,7 @@ public class FungiController : MonoBehaviour
                 state--;
             else
                 state = System.Enum.GetNames(typeof(States)).Length-1;
-            SetFungiState();
+            FungiState();
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -97,8 +102,41 @@ public class FungiController : MonoBehaviour
                 state++;
             else
                 state = 0;
-            SetFungiState();
+            FungiState();
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            GoToAction(collision.gameObject);
+        }
+    }
+    private void GoToAction(GameObject _enemy)
+    {
+        if (_enemy.GetComponent<AcidBehaviour>()&&fungiState==States.state1)
+        {
+            //anim
+        }
+        else if (_enemy.GetComponent<BugBehaviour>() && fungiState == States.state2)
+        {
+            //anim
+        }
+        else if(_enemy.GetComponent<SlimeBehaviour>() && fungiState == States.state3)
+        {
+            //anim
+        }
+        else
+        {
+            GetDamage();
+        }
+
+        _enemy.SetActive(false);
+    }
+    private void GetDamage()
+    {
+        currentAnim.SetTrigger("Damage");
+        GameManager.Instance.FungiDamage();
     }
     public enum States
     {

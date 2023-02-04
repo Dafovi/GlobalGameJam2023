@@ -59,21 +59,21 @@ public class FungiSisterController : MonoBehaviour, IDamageable {
   }
 
   void MoveToDistraction(){
-    transform.position = Vector2.MoveTowards(transform.position, distractionPosition_, distractionSpeed_ * Time.deltaTime);
+    transform.position = Vector2.MoveTowards(transform.position,new Vector2 (distractionPosition_.x, fungiControllerRef_.transform.position.y), distractionSpeed_ * Time.deltaTime);
     if(Vector2.Distance(transform.position, distractionPosition_) < 0.2f){
       isMoving_ = false;
     }
   }
 
   void OnTriggerEnter2D(Collider2D collider){
-    if(collider.gameObject.GetComponent<FungiController>() != null){
+    if(collider.gameObject.GetComponent<FungiController>()){
       isDistracted_ = false;
       isSorted_ = false;
     }
   }
 
   public void TakeDamage(){
-    gameObject.SetActive(false);
+        GameManager.Instance.FungiSisterDamage();
   }
 
 }
