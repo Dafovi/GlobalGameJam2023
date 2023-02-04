@@ -11,13 +11,10 @@ public class GameManager : MonoBehaviour {
   public float screenWidth_;
 
   void Start() {
-
     screenHeight_ = Camera.main.orthographicSize;
     screenWidth_ = screenHeight_ * Camera.main.aspect;
-
     leftScreen_ = new Vector3(-screenWidth_, -3.0f, 0.0f);
     rightScreen_ = new Vector3(screenWidth_, -3.0f, 0.0f);
-      
   }
 
   void Update() {
