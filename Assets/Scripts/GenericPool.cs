@@ -12,7 +12,7 @@ public class GenericPool : MonoBehaviour {
   void Start() {
     pool_ = new List<GameObject>();
     for(int i = 0; i < totalPoolSize_; ++i){
-      GameObject temp = Instantiate(prefab_, Vector3.zero, Quaternion.identity);
+      GameObject temp = Instantiate(prefab_, transform);
       temp.SetActive(false);
       pool_.Add(temp);
     }
@@ -26,7 +26,7 @@ public class GenericPool : MonoBehaviour {
         return pool_[i];
       }
     }
-    GameObject temp = Instantiate(prefab_, position, Quaternion.identity);
+    GameObject temp = Instantiate(prefab_, position, Quaternion.identity, transform);
     pool_.Add(temp);
     return pool_.Last();
   }
