@@ -7,7 +7,6 @@ public class SlimeSpawnManager : MonoBehaviour {
   private GameManager gameManagerRef_;
 
   private Vector3 spawnPosition_;
-  private float spawn_x;
   public int spawnDirection_;
 
   private float currentTimeToSpawn_;
@@ -17,9 +16,6 @@ public class SlimeSpawnManager : MonoBehaviour {
 
   void Start() {
     gameManagerRef_ = FindObjectOfType<GameManager>();
-    spawn_x = Camera.main.orthographicSize * Camera.main.aspect;
-    leftScreen = new Vector3(-spawn_x, -3.0f, 0.0f);
-    rightScreen = new Vector3(spawn_x, -3.0f, 0.0f);
 
     nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
   }
@@ -34,15 +30,15 @@ public class SlimeSpawnManager : MonoBehaviour {
   }
 
   void SetSlimeSpawn(){
-    float distanceFromLeftScreen = Vector3.Distance(sisterFungiRef_.transform.position, leftScreen);
-    float distanceFromRightScreen = Vector3.Distance(sisterFungiRef_.transform.position, rightScreen);
+    float distanceFromLeftScreen = Vector3.Distance(sisterFungiRef_.transform.position, gameManagerRef_.leftScreen_);
+    float distanceFromRightScreen = Vector3.Distance(sisterFungiRef_.transform.position, gameManagerRef_.rightScreen_);
 
     spawnDirection_ = 1;
     if(distanceFromLeftScreen > distanceFromRightScreen){
       spawnDirection_ = -1;
     }
 
-    spawnPosition_ = new Vector3(spawn_x * spawnDirection_, -3.0f, 0.0f);
+    spawnPosition_ = new Vector3(gameManagerRef_.screenWidth_ * spawnDirection_, -3.0f, 0.0f);
     Instantiate(slimePrefab_, spawnPosition_, Quaternion.identity);
 
     nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
