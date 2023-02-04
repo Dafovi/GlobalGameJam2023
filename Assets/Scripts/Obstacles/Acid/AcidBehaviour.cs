@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AcidBehaviour : MonoBehaviour {
 
-  public bool hasFallen_ = false;
   private Rigidbody2D rb_;
 
   void Start(){
@@ -13,12 +12,7 @@ public class AcidBehaviour : MonoBehaviour {
   }
 
   void OnEnable(){
-    hasFallen_ = false;
     StartCoroutine(Wait());
-  }
-
-  void OnDisable(){
-    hasFallen_ = true;
   }
 
   void OnTriggerEnter2D(Collider2D collider){
@@ -29,7 +23,6 @@ public class AcidBehaviour : MonoBehaviour {
         {
             GameManager.Instance.AddDificult();
         }
-    hasFallen_ = true;
     gameObject.SetActive(false);
   }
 

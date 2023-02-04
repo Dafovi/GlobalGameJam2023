@@ -23,16 +23,21 @@ public class NewSisterController : MonoBehaviour, IDamageable {
       transform.position = Vector3.MoveTowards(transform.position, acidPosition_, sisteSpeed_ * Time.deltaTime);
       if(Vector3.Distance(transform.position, acidPosition_) < 0.1f){
         isLocked_ = false;
-        acidRef_.hasFallen_ = false;
-        activeAcidList_.Clear();
       }
     }
+
+    if(acidRef_ != null && !acidRef_.gameObject.activeInHierarchy){
+      isLocked_ = false;
+      SearchForTarget();
+    }
+
   }
 
   void SearchForTarget(){
     if(isLocked_)
       return;
 
+    activeAcidList_.Clear();
     for(int i = 0; i < acidManager_.acidSpawnerPoolRef_.pool_.Count; ++i){
       if(acidManager_.acidSpawnerPoolRef_.pool_[i].activeInHierarchy){
         GameObject temp = acidManager_.acidSpawnerPoolRef_.pool_[i];

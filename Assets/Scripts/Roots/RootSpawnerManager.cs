@@ -52,12 +52,14 @@ public class RootSpawnerManager : MonoBehaviour {
         if (AddTO == 0)
         {
             currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _root1.Count - 1);
-            root1.sprite = _root1[currentRoot];
+            if(currentRoot >=  0)
+                root1.sprite = _root1[currentRoot];
         }
         else
         {
             currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _root2.Count - 1);
-            root2.sprite = _root2[currentRoot];
+            if(currentRoot >=  0)
+                root2.sprite = _root2[currentRoot];
         }
     }
     void SetSpawnVitamin(){
