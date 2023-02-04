@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BugBehaviour : MonoBehaviour {
@@ -16,6 +14,13 @@ public class BugBehaviour : MonoBehaviour {
     // float offsetY = Random.Range(-0.2f, 0.2f);
     // Vector3 targetPosition = new Vector3(transform.position.x, transform.position.y - offsetY, transform.position.z);
     transform.position = Vector3.MoveTowards(transform.position, sisterFungiRef_.transform.position, bugSpeed_ * Time.deltaTime);
+  }
+
+  void OnTriggerEnter2D(Collider2D collider){
+    if(collider.gameObject.GetComponent<IDamageable>() != null){
+      collider.gameObject.GetComponent<IDamageable>().TakeDamage();
+      gameObject.SetActive(false);
+    }
   }
 
 }

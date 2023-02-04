@@ -43,9 +43,6 @@ public class FungiSisterController : MonoBehaviour, IDamageable {
     if(isSorted_ && isDistracted_ && isMoving_)
       MoveToDistraction();
 
-    // if(isDistracted_ && isSorted_)
-      // RecoverSister();
-
   }
 
   void SortFurtherDistraction(){

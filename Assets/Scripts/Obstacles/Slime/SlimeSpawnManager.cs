@@ -1,37 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SlimeSpawnManager : MonoBehaviour {
 
   [SerializeField] private GameObject sisterFungiRef_;
   [SerializeField] private GameObject slimePrefab_;
+  private GameManager gameManagerRef_;
 
-  // private float maxTime_ = 1.0f;
-  // private float currentTime_ = 0.0f;
   private Vector3 spawnPosition_;
-  private Vector3 leftScreen;
-  private Vector3 rightScreen;
   private float spawn_x;
-  
   public int spawnDirection_;
 
+  private float currentTimeToSpawn_;
+  private float nextTimeToSpawn_;
+  [SerializeField] private float minTimeToSpawn_;
+  [SerializeField] private float maxTimeToSpawn_;
+
   void Start() {
+    gameManagerRef_ = FindObjectOfType<GameManager>();
     spawn_x = Camera.main.orthographicSize * Camera.main.aspect;
     leftScreen = new Vector3(-spawn_x, -3.0f, 0.0f);
     rightScreen = new Vector3(spawn_x, -3.0f, 0.0f);
+
+    nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
   }
 
   void Update(){
-    // if(currentTime_ > maxTime_){
-    //   SetSlimeSpawn();
-    //   currentTime_ = 0.0f;
-    // }
-    // currentTime_ += Time.deltaTime;
-  
-    if(Input.GetButtonDown("Fire1")){
-      SetSlimeSpawn();
+    if(gameManagerRef_.currentDifficulty_ > 2){
+      if(currentTimeToSpawn_ > nextTimeToSpawn_){
+        SetSlimeSpawn();
+      }
     }
+    currentTimeToSpawn_ += Time.deltaTime;
   }
 
   void SetSlimeSpawn(){
@@ -45,6 +44,9 @@ public class SlimeSpawnManager : MonoBehaviour {
 
     spawnPosition_ = new Vector3(spawn_x * spawnDirection_, -3.0f, 0.0f);
     Instantiate(slimePrefab_, spawnPosition_, Quaternion.identity);
+
+    nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
+    currentTimeToSpawn_ = 0.0f;
   }
 
 
