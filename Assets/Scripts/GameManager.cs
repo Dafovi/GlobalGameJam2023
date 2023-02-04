@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public float screenWidth_;
     public Action EnemyHit;
     public Action EnemyDie;
+    
 
 
     [Header("Fungis life")]
@@ -20,6 +21,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private int fungiSisterLifes = 5;
     [SerializeField,Space(10)]private int enemyDefeatCount;
     [SerializeField] private int acidFallCount;
+    [SerializeField] private GameObject behaviors;
+    [SerializeField] private int maxVitaminas=5;
+    private int currentVitaminas;
+    
 
     public bool GameOver {get; set;}
     public int EnemiesCount {get; set;}
@@ -69,6 +74,14 @@ public class GameManager : MonoBehaviour {
         EnemyDie?.Invoke();
         enemyDefeatCount++;
         EnemiesCount++;
+    }
+    public void AddVitaminas()
+    {
+        currentVitaminas++;
+        if (currentVitaminas == maxVitaminas)
+        {
+            behaviors.SetActive(false);
+        }
     }
     public static float Remap(float value, float from1, float to1, float from2, float to2)
     {

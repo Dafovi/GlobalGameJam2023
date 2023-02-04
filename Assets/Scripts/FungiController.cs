@@ -115,6 +115,7 @@ public class FungiController : MonoBehaviour
         {
             GameManager.Instance.vitaminCount_++;
             GameManager.Instance.AddDificult();
+            GameManager.Instance.AddVitaminas();
             Destroy(collision.gameObject);
         }
     }
