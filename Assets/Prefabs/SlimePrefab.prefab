@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3978829135843441083}
   - component: {fileID: 5528333233655472167}
   - component: {fileID: 7659090617119600773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlimePrefab
   m_TagString: Enemy
   m_Icon: {fileID: 0}

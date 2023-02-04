@@ -9,8 +9,6 @@ public class FungiSisterController : MonoBehaviour, IDamageable {
   private float minDistanceToMove_;
   private FungiController fungiControllerRef_;
 
-  // private byte currentTimesToGetDistracted_ = 0;
-  // private byte maxTimesToGetDistracted_ = 3;
   private bool isDistracted_ = false;
   private bool isSorted_ = false;
   private bool isMoving_ = false;
@@ -19,14 +17,13 @@ public class FungiSisterController : MonoBehaviour, IDamageable {
   [SerializeField, Range(1.0f, 10.0f)] private float distractionSpeed_; 
 
   void Start() {
-    // distractionList_ = new List<GameObject>();
     fungiControllerRef_ = FindObjectOfType<FungiController>();
     minDistanceToMove_ = fungiControllerRef_.transform.localScale.x;
   }
 
   void Update() {
 
-    if(GameManager.Instance.vitaminCount_ > 2){
+    if(GameManager.Instance.vitaminCount_ >= 2){
       isDistracted_ = true;
     }
 

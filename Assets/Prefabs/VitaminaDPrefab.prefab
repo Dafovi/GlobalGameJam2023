@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7183756559447658365}
   - component: {fileID: 7937900390323121916}
   - component: {fileID: 7836801771683884892}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: VitaminaDPrefab
   m_TagString: Vitamina
   m_Icon: {fileID: 0}

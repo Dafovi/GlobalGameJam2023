@@ -387,8 +387,8 @@ GameObject:
   - component: {fileID: 83153357}
   - component: {fileID: 83153356}
   - component: {fileID: 83153360}
-  - component: {fileID: 83153359}
   - component: {fileID: 83153361}
+  - component: {fileID: 83153362}
   m_Layer: 0
   m_Name: SisterFungi
   m_TagString: Untagged
@@ -463,22 +463,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &83153359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83153355}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 863d86e00a648ad49bc821628893ec04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distractionList_:
-  - {fileID: 1572990973}
-  - {fileID: 666602502}
-  distractionSpeed_: 3
 --- !u!70 &83153360
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -516,6 +500,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &83153362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83153355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c2ef494d0b7e84c970d6847714c4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acidManager_: {fileID: 132572646}
+  activeAcidList_: []
+  sisteSpeed_: 3
 --- !u!1 &132572643
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,6 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea2019bec1196b43ac7977ad0a44a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pool_: []
   totalPoolSize_: 10
   prefab_: {fileID: 7644214755717749038, guid: be96190faa61fb1489b9ad44285770f9, type: 3}
 --- !u!114 &132572646
@@ -575,8 +575,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4578a94999fd9745a407359416f00a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn_: 3
-  currenTime: 6
+  timeToSpawn_: 1
+  currenTime: 0
+  acidSpawnerPoolRef_: {fileID: 0}
 --- !u!1 &146893234
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,8 +804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -49}
-  m_SizeDelta: {x: 246.9226, y: 92.5843}
+  m_AnchoredPosition: {x: 0, y: -90}
+  m_SizeDelta: {x: 320, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234510966
 MonoBehaviour:
@@ -985,7 +986,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 61.55
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1504,7 +1505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &885311083
 Transform:
   m_ObjectHideFlags: 0
@@ -1934,7 +1935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1337394947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1947,6 +1948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea2019bec1196b43ac7977ad0a44a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pool_: []
   totalPoolSize_: 3
   prefab_: {fileID: 818093034487918650, guid: a32115f7b11d6d5468d28f3c06249f28, type: 3}
 --- !u!4 &1337394948
@@ -2150,8 +2152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 78}
-  m_SizeDelta: {x: 246.9226, y: 92.5843}
+  m_AnchoredPosition: {x: 0, y: 90}
+  m_SizeDelta: {x: 320, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385788447
 MonoBehaviour:
@@ -2427,7 +2429,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2442,9 +2444,9 @@ Canvas:
   m_GameObject: {fileID: 1500252465}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
+  m_PlaneDistance: 0.3
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2636,13 +2638,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549667577}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a82229e48c9864e48bc6e38ff188e20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   vitPrefab_: {fileID: 9065948789955272021, guid: 5d2aa4ca7e15a2943a6370ef5c13807f, type: 3}
-  maxSpawnCount: 10
+  maxSpawnCount: 2
 --- !u!4 &1549667579
 Transform:
   m_ObjectHideFlags: 0
@@ -3022,10 +3024,10 @@ RectTransform:
   m_Father: {fileID: 1500252469}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000076293945}
-  m_SizeDelta: {x: 922.0624, y: 463.4731}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913413167
 MonoBehaviour:
@@ -3040,7 +3042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.28235295}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

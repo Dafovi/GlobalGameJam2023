@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GenericPool : MonoBehaviour {
 
-  private List<GameObject> pool_;
+  public List<GameObject> pool_;
   [SerializeField] private int totalPoolSize_;
   [SerializeField] private GameObject prefab_;
 
