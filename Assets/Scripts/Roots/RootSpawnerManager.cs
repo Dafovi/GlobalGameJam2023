@@ -15,8 +15,16 @@ public class RootSpawnerManager : MonoBehaviour {
   void Start(){
     gameManagerRef_ = FindObjectOfType<GameManager>();
     nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
+        GameManager.Instance.AddDificultAction += UpdateDifficult;
   }
 
+    private void UpdateDifficult()
+    {
+        currentTimeToSpawn_ = 0.0f;
+        minTimeToSpawn_ += 1.25f * GameManager.Instance.currentDifficulty_;
+        maxTimeToSpawn_ += 1.5f * GameManager.Instance.currentDifficulty_;
+        nextTimeToSpawn_ = Random.Range(minTimeToSpawn_, maxTimeToSpawn_);
+    }
   void Update(){
     if(currentTimeToSpawn_ > nextTimeToSpawn_){
       SetSpawnVitamin();

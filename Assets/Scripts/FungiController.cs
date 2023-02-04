@@ -111,6 +111,11 @@ public class FungiController : MonoBehaviour
         {
             GoToAction(collision.gameObject);
         }
+        if (collision.CompareTag("Vitamina"))
+        {
+            GameManager.Instance.AddDificult();
+            Destroy(collision.gameObject);
+        }
     }
     private void GoToAction(GameObject _enemy)
     {

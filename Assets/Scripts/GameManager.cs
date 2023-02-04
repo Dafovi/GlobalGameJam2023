@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour {
     public Vector3 rightScreen_;
     public float screenHeight_;
     public float screenWidth_;
+    public Action AddDificultAction;
 
     [Header("Fungis life")]
     [SerializeField] private int fungiLifes = 5;
@@ -27,7 +29,14 @@ public class GameManager : MonoBehaviour {
         leftScreen_ = new Vector3(-screenWidth_, -3.0f, 0.0f);
         rightScreen_ = new Vector3(screenWidth_, -3.0f, 0.0f);
     }
-
+    public void AddDificult()
+    {
+        if (currentDifficulty_ < 10)
+        {
+            currentDifficulty_++;
+            AddDificultAction?.Invoke();
+        }
+    }
     void Update() {
 
         if(Input.GetKeyDown(KeyCode.Delete)){
