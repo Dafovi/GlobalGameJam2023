@@ -113,6 +113,8 @@ public class GameManager : MonoBehaviour {
             OnEndGame.Invoke();
         }
         bg.sprite = backgrounds[currentVitaminas];
+
+        AddDificult();
     }
     public static float Remap(float value, float from1, float to1, float from2, float to2)
     {
