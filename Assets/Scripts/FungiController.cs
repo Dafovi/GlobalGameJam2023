@@ -10,6 +10,7 @@ public class FungiController : MonoBehaviour
     private bool recolector;
     private Animator anim;
     private float horizontalMovement;
+    private bool flip;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,20 +27,22 @@ public class FungiController : MonoBehaviour
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Transform") && !anim.GetCurrentAnimatorStateInfo(0).IsName("TransformRecolector"))
         {
             horizontalMovement = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
         }
-        anim.SetBool("Recolector", recolector);
+
+        rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
     }
     private void MoveAnim()
     {
         anim.SetBool("Walk", horizontalMovement != 0 ? true : false);
-        anim.GetComponent<SpriteRenderer>().flipX = horizontalMovement < 0 ? true : false;   
+        flip = horizontalMovement == 1 ? false : horizontalMovement == -1 ? true : flip;
+        anim.GetComponent<SpriteRenderer>().flipX = flip;   
     }
     private void ChangeState()
     {
         if (Input.GetMouseButtonDown(0)|| Input.GetMouseButtonDown(1))
         {
             recolector = !recolector;
+            anim.SetBool("Recolector", recolector);
             anim.SetTrigger("Transform");
         }
     }
