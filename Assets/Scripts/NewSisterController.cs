@@ -33,6 +33,7 @@ public class NewSisterController : MonoBehaviour, IDamageable {
 
     if(acidRef_ != null && !acidRef_.gameObject.activeInHierarchy){
       isLocked_ = false;
+       anim.SetBool("Walk", false);
       SearchForTarget();
     }
 
@@ -49,10 +50,12 @@ public class NewSisterController : MonoBehaviour, IDamageable {
         activeAcidList_.Add(temp);
       }
     }
-    int random_index = Random.Range(0, activeAcidList_.Count);
-    acidPosition_ = new Vector3(activeAcidList_[random_index].transform.position.x, transform.position.y, transform.position.z);
-    acidRef_ = activeAcidList_[random_index].GetComponent<AcidBehaviour>();
-    isLocked_ = true;
+    if(activeAcidList_.Count != 0){
+      int random_index = Random.Range(0, activeAcidList_.Count);
+      acidPosition_ = new Vector3(activeAcidList_[random_index].transform.position.x, transform.position.y, transform.position.z);
+      acidRef_ = activeAcidList_[random_index].GetComponent<AcidBehaviour>();
+      isLocked_ = true;
+    }
   }
 
   public void TakeDamage(){

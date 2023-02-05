@@ -11,13 +11,15 @@ public class SlimeSpawnManager : MonoBehaviour {
   private Vector3 spawnPosition_;
   public int spawnDirection_;
 
+  [SerializeField] private int timeToSpawn_;
+
   void Start() {
     slimePoolRef_ = GetComponent<GenericPool>();
     GameManager.Instance.EnemyHit += SetSlimeSpawn;
   }
 
   void SetSlimeSpawn(){
-    int spawn = Random.Range(0, 15 - GameManager.Instance.currentDifficulty_);
+    int spawn = Random.Range(0, timeToSpawn_ - GameManager.Instance.currentDifficulty_);
     if(spawn == 0){
       switch(Random.Range(0, 2)){
         case 0: 

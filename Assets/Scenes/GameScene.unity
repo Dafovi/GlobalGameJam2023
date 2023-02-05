@@ -720,9 +720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4578a94999fd9745a407359416f00a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToSpawn_: 1
-  currenTime: 0
   acidSpawnerPoolRef_: {fileID: 0}
+  initialTime_: 5
 --- !u!1 &146893234
 GameObject:
   m_ObjectHideFlags: 0
@@ -2068,6 +2067,7 @@ MonoBehaviour:
   leftSpawn_: {fileID: 1250303750}
   rightSpawn_: {fileID: 1872164911}
   spawnDirection_: 0
+  timeToSpawn_: 1
 --- !u!114 &885311085
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,7 +17,9 @@ public class AcidBehaviour : MonoBehaviour {
     }
 
   void OnEnable(){
-        collider2d.enabled = true;
+      rb_.gravityScale = 0.0f;
+      collider2d.enabled = true;
+      rb_.velocity = Vector2.zero;
     }
 
   void OnTriggerEnter2D(Collider2D collider){
@@ -29,9 +31,13 @@ public class AcidBehaviour : MonoBehaviour {
             GameManager.Instance.AddDificult();
             GetComponent<Animator>().SetTrigger("Splash");
             rb_.gravityScale = 0.0f;
-            rb_.velocity = Vector2.zero;
             collider2d.enabled = false;
+            gameObject.SetActive(false);            
         }
+  }
+
+  void OnDisable(){
+    rb_.velocity = Vector2.zero;
   }
 
   public void Fall(){
