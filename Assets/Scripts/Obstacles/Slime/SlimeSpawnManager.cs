@@ -18,6 +18,7 @@ public class SlimeSpawnManager : MonoBehaviour {
   }
 
   void SetSlimeSpawn(){
+    if(spawnedSlimes_ <= 0) spawnedSlimes_ = 0;
     if(spawnedSlimes_ < slimePoolRef_.pool_.Count){
       switch(Random.Range(0, 2)){
         case 0: 
