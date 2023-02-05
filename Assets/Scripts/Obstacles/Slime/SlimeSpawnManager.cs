@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class SlimeSpawnManager : MonoBehaviour {
 
@@ -13,9 +15,15 @@ public class SlimeSpawnManager : MonoBehaviour {
 
   [SerializeField] private int timeToSpawn_;
 
-  void Start() {
+    IEnumerator Start() {
     slimePoolRef_ = GetComponent<GenericPool>();
     GameManager.Instance.EnemyHit += SetSlimeSpawn;
+        while (true)
+        {
+            yield return new WaitForSeconds(5);
+            SetSlimeSpawn();
+            yield return null;
+        }
   }
 
   void SetSlimeSpawn(){
