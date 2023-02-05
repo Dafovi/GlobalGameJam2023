@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -421362294019755209}
   - component: {fileID: 8286918558765119044}
   - component: {fileID: 1938789739654616386}
+  - component: {fileID: 750284805}
   m_Layer: 8
   m_Name: AcidPrefab
   m_TagString: Enemy
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -1991653173, guid: 40c11d17cd9a43f47a1bfb8dfc047f07, type: 3}
   m_Color: {r: 0.9509299, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +122,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.33}
   serializedVersion: 2
   m_Radius: 0.5
 --- !u!114 &1938789739654616386
@@ -136,4 +137,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a67b9bf6655d1847a16ed6642a46f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasFallen_: 0
+--- !u!95 &750284805
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644214755717749038}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af16367ad6c84cc48bcc5efcbbee1308, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
