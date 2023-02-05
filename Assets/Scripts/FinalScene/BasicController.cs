@@ -8,6 +8,7 @@ public class BasicController : MonoBehaviour
     [SerializeField] private float speed;
     private Animator anim;
     private Rigidbody2D rb;
+    private bool flip;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -25,12 +26,13 @@ public class BasicController : MonoBehaviour
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Transform"))
         {
             horizontalMovement = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
         }
+            rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
     }
     private void MoveAnim()
     {
         anim.SetBool("Walk", horizontalMovement != 0 ? true : false);
-        GetComponent<SpriteRenderer>().flipX = horizontalMovement < 0 ? true : false;
+        flip = horizontalMovement == 1 ? false : horizontalMovement == -1 ? true : flip;
+        anim.GetComponent<SpriteRenderer>().flipX = flip;
     }
 }
