@@ -24,9 +24,12 @@ public class GameManager : MonoBehaviour {
     [SerializeField,Space(10)]private int enemyDefeatCount;
     [SerializeField] private int maxVitaminas=5;
     [SerializeField] private UnityEvent OnEndGame;
+    [Header("BackGround")]
+    [SerializeField] private List<Sprite> backgrounds;
+    [SerializeField] private SpriteRenderer bg;
+
+
     private int currentVitaminas;
-
-
     public bool GameOver {get; set;}
     public int EnemiesCount {get; set;}
 
@@ -93,6 +96,7 @@ public class GameManager : MonoBehaviour {
         {
             OnEndGame.Invoke();
         }
+        bg.sprite = backgrounds[currentVitaminas];
     }
     public static float Remap(float value, float from1, float to1, float from2, float to2)
     {
