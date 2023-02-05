@@ -65,7 +65,14 @@ public class RootSpawnerManager : MonoBehaviour {
     void SetSpawnVitamin(){
         if (AddTO == 0) spawnPoint = root1Spwan;
         else spawnPoint = root2Spwan;
-        Instantiate(vitPrefab_, spawnPoint.position, Quaternion.identity);
+        GameObject vitamin = Instantiate(vitPrefab_, spawnPoint.position, Quaternion.identity);
+        vitamin.GetComponent<SpriteRenderer>().flipX = AddTO != 0 ? false : true;
+    }
+
+    void Update(){
+        if(Input.GetButtonDown("Jump")){
+            SetSpawnVitamin();
+        }
     }
 
 }

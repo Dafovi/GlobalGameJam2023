@@ -13,17 +13,12 @@ public class SlimeSpawnManager : MonoBehaviour {
 
   void Start() {
     slimePoolRef_ = GetComponent<GenericPool>();
-    // GameManager.Instance.EnemyHit += SetSlimeSpawn;
-  }
-
-  void Update(){
-    if(Input.GetButtonDown("Jump"))
-      SetSlimeSpawn();
+    GameManager.Instance.EnemyHit += SetSlimeSpawn;
   }
 
   void SetSlimeSpawn(){
-    // int spawn = Random.Range(0, 15 - GameManager.Instance.currentDifficulty_);
-    // if(spawn == 0){
+    int spawn = Random.Range(0, 15 - GameManager.Instance.currentDifficulty_);
+    if(spawn == 0){
       switch(Random.Range(0, 2)){
         case 0: 
           spawnPosition_ = leftSpawn_.transform.position;
@@ -35,7 +30,7 @@ public class SlimeSpawnManager : MonoBehaviour {
           break;
       }
       slimePoolRef_.GetFromPool(spawnPosition_);
-    // }
+    }
   }
 
 
