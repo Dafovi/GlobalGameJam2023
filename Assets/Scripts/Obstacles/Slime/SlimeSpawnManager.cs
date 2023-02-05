@@ -5,6 +5,9 @@ public class SlimeSpawnManager : MonoBehaviour {
   [SerializeField] private GameObject sisterFungiRef_;
   [SerializeField] private GenericPool pool_;
 
+  public GameObject leftSpawn_;
+  public GameObject rightSpawn_;
+
   private Vector3 spawnPosition_;
   private int difficultToSpawn_;
   public int spawnDirection_;
@@ -26,15 +29,18 @@ public class SlimeSpawnManager : MonoBehaviour {
   }
 
   void SetSlimeSpawn(){
-    float distanceFromLeftScreen = Vector3.Distance(sisterFungiRef_.transform.position, GameManager.Instance.leftScreen_);
-    float distanceFromRightScreen = Vector3.Distance(sisterFungiRef_.transform.position, GameManager.Instance.rightScreen_);
 
-    spawnDirection_ = 1;
-    if(distanceFromLeftScreen > distanceFromRightScreen){
-      spawnDirection_ = -1;
+    switch(Random.Range(0, 2)){
+      case 0: 
+        spawnPosition_ = leftSpawn_.transform.position;
+        spawnDirection_ = 1;
+        break;
+      case 1:
+        spawnPosition_ = rightSpawn_.transform.position;
+        spawnDirection_ = -1;
+        break;
     }
 
-    spawnPosition_ = new Vector3(GameManager.Instance.screenWidth_ * spawnDirection_, -4.4f, 0.0f);
     pool_.GetFromPool(spawnPosition_);
   }
 

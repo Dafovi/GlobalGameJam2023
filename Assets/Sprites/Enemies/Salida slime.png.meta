@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,7 +103,364 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Salida slime_0
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 875
+        width: 45
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f6017487224c946ab7fe7f432fbb15
+      internalID: 657555240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_1
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 870
+        width: 55
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59dc9b95b20b0c44c8b52bcd6d6d13a5
+      internalID: -18912336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_2
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 870
+        width: 73
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20e4bbe49387fb4397986b0649deaf2
+      internalID: 318082174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_3
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 874
+        width: 105
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11392c34418da864e940a56ddc6b6eb9
+      internalID: -2098891294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_4
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 863
+        width: 156
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9588f8662bf30a4b9392f69f81503c1
+      internalID: -753062483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_5
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 864
+        width: 222
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c6abdd1db7a674fa5e5d8e130c5828
+      internalID: -1889497951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_6
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 859
+        width: 241
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501af5cf4852d194a968ce3fc5e8fc19
+      internalID: -765073405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_7
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 482
+        width: 330
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6702f7d1cc91fe14e8a22a0a5aae8c5f
+      internalID: 968970897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_8
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 483
+        width: 305
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0a816d5d418bbf41925fa7e19e40d48
+      internalID: -1729986070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_9
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 478
+        width: 258
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90ab75dfc8b3bac4c9bb08b8b2c93d76
+      internalID: 901005390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_10
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 481
+        width: 260
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4b51de41e19444dac1d2217ec33b7d
+      internalID: -798394005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_11
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 487
+        width: 263
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17ef7ecba6e00942b8615844da0e699
+      internalID: 320894316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_12
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 110
+        width: 294
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2b1e287c2fd0a48b180521b2515b92
+      internalID: 818552694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_13
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 110
+        width: 278
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdb8191f027fc2469cb840e0a6cebca
+      internalID: 563838163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_14
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 106
+        width: 271
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc76644a8b25f0b46af43341b5eb294a
+      internalID: 1134545105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_15
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 104
+        width: 268
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2c2ef8868554e488796d5c93cd0b4b
+      internalID: -826840410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salida slime_16
+      rect:
+        serializedVersion: 2
+        x: 1618
+        y: 102
+        width: 270
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c6021286ac1c04ca42ba33c6bf3920
+      internalID: -1067456808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +471,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Salida slime_15: -826840410
+      Salida slime_11: 320894316
+      Salida slime_9: 901005390
+      Salida slime_16: -1067456808
+      Salida slime_7: 968970897
+      Salida slime_3: -2098891294
+      Salida slime_13: 563838163
+      Salida slime_0: 657555240
+      Salida slime_2: 318082174
+      Salida slime_5: -1889497951
+      Salida slime_14: 1134545105
+      Salida slime_10: -798394005
+      Salida slime_1: -18912336
+      Salida slime_8: -1729986070
+      Salida slime_4: -753062483
+      Salida slime_6: -765073405
+      Salida slime_12: 818552694
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
