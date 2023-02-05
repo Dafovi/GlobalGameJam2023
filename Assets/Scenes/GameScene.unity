@@ -1361,6 +1361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 885311083}
+  - component: {fileID: 885311085}
   - component: {fileID: 885311084}
   m_Layer: 0
   m_Name: SlimeSpawner
@@ -1368,7 +1369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &885311083
 Transform:
   m_ObjectHideFlags: 0
@@ -1397,11 +1398,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sisterFungiRef_: {fileID: 83153355}
-  slimePrefab_: {fileID: 102333336701620353, guid: edda4d8b5f9b8d54cb8b562c28a0c618, type: 3}
+  pool_: {fileID: 0}
   spawnDirection_: 0
-  minTimeToSpawn_: 10
-  maxTimeToSpawn_: 12
+  minTimeToSpawn_: 1
+  maxTimeToSpawn_: 1
   difficultToSpawn_: 2
+--- !u!114 &885311085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885311082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea2019bec1196b43ac7977ad0a44a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pool_: []
+  totalPoolSize_: 3
+  prefab_: {fileID: 102333336701620353, guid: edda4d8b5f9b8d54cb8b562c28a0c618, type: 3}
 --- !u!1 &924253564
 GameObject:
   m_ObjectHideFlags: 0
@@ -1949,7 +1965,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1488479203
 GameObject:
@@ -2761,7 +2777,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2080306815032338172, guid: 7addd421d66905f4aa7976fc533ac0da, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2080306815032338172, guid: 7addd421d66905f4aa7976fc533ac0da, type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,12 +13,13 @@ public class SlimeBehaviour : MonoBehaviour {
 
   void Update() {
     transform.position += transform.right * slimeSpeed_ * slimeDirection_ * Time.deltaTime;
+    GetComponent<SpriteRenderer>().flipX = slimeDirection_ < 0 ? false :  true;
   }
 
   void OnTriggerEnter2D(Collider2D collider){
     if(collider.gameObject.GetComponent<IDamageable>() != null){
       collider.gameObject.GetComponent<IDamageable>().TakeDamage();
-      Destroy(gameObject);
+      gameObject.SetActive(false);
     }
   }
 }

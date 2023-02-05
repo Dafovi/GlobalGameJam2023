@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 9022765671863033972}
   - component: {fileID: 3978829135843441083}
   - component: {fileID: 5528333233655472167}
-  - component: {fileID: 7659090617119600773}
+  - component: {fileID: 9218856498795425594}
+  - component: {fileID: 1680701257}
   m_Layer: 8
   m_Name: SlimePrefab
   m_TagString: Enemy
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 606231670, guid: 10d71e1b51c2fe941834e8d9f27cd561, type: 3}
   m_Color: {r: 0, g: 1, b: 0.11449838, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,9 +99,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6326acee44db24bbcedc7a574a3a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slimeSpeed_: 5
---- !u!61 &7659090617119600773
-BoxCollider2D:
+  slimeSpeed_: 3
+--- !u!95 &9218856498795425594
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102333336701620353}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ac82be60cdd5ee4ea0c51b78280ffa9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &1680701257
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -109,19 +130,9 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.44666666
