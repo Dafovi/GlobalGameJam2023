@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slimeSpeed_: 3
   moveClip_: {fileID: 8300000, guid: 5737b7157af139b4b8492fe8ac0f09de, type: 3}
+  splashClip_: {fileID: 8300000, guid: 566e97f75a67a434da5f835c7d326ca4, type: 3}
 --- !u!95 &9218856498795425594
 Animator:
   serializedVersion: 5

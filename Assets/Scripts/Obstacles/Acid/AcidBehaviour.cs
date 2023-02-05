@@ -30,18 +30,17 @@ public class AcidBehaviour : MonoBehaviour {
     }
         if (collider.CompareTag("Ground"))
         {
-            GameManager.Instance.Sfx_.PlayOneShot(splashClip_, 1);
             GameManager.Instance.AddDificult();
             GetComponent<Animator>().SetTrigger("Splash");
             rb_.gravityScale = 0.0f;
-            collider2d.enabled = false;
-            gameObject.SetActive(false);            
+            collider2d.enabled = false;           
         }
   }
 
   void OnDisable(){
-    rb_.velocity = Vector2.zero;
-  }
+        rb_.velocity = Vector2.zero;
+        GameManager.Instance.Sfx_.PlayOneShot(splashClip_, 1);
+    }
 
   public void Fall(){
     rb_.gravityScale = 0.5f;

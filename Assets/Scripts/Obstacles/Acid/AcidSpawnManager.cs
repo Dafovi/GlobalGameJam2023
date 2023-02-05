@@ -17,7 +17,7 @@ public class AcidSpawnManager : MonoBehaviour {
 
   void Start() {
     acidSpawnerPoolRef_ = GetComponent<GenericPool>();
-    cameraHeight_ = Camera.main.orthographicSize * 2.0f;
+    cameraHeight_ = Camera.main.orthographicSize;
     cameraWidth_ = cameraHeight_ * Camera.main.aspect;
     nextTime_ = 1.0f;
   }
@@ -31,8 +31,8 @@ public class AcidSpawnManager : MonoBehaviour {
   }
 
   void SetSpawnPoint(){
-    float y = Camera.main.orthographicSize;
-    float x = y * Camera.main.aspect - 2.0f;
+    float y = Camera.main.orthographicSize*0.24f;
+    float x = cameraHeight_ * Camera.main.aspect - 2.0f;
     float final_x = UnityEngine.Random.Range(-x, x);
 
     Vector3 new_position = new Vector3(final_x, y, 0.0f);

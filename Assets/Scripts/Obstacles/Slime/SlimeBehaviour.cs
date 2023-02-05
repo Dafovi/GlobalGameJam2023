@@ -8,8 +8,9 @@ public class SlimeBehaviour : MonoBehaviour {
   private Animator anim_;
 
   [SerializeField] private AudioClip moveClip_;
+[SerializeField] private AudioClip splashClip_;
 
-  void Awake() {
+    void Awake() {
     anim_ = GetComponent<Animator>();
     spawnManagerRef_ = FindObjectOfType<SlimeSpawnManager>();
   }
@@ -25,8 +26,12 @@ public class SlimeBehaviour : MonoBehaviour {
     }
 
   }
+    void OnDisable()
+    {
+        GameManager.Instance.Sfx_.PlayOneShot(splashClip_, 1);
+    }
 
-  void OnTriggerEnter2D(Collider2D collider){
+    void OnTriggerEnter2D(Collider2D collider){
     if(collider.gameObject.GetComponent<IDamageable>() != null){
       collider.gameObject.GetComponent<IDamageable>().TakeDamage();
       gameObject.SetActive(false);

@@ -9,6 +9,9 @@ public class BasicController : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
     private bool flip;
+    [SerializeField] private AudioSource sfx_;
+    [SerializeField] private List<AudioClip> leftSteps_;
+    [SerializeField] private List<AudioClip> rightSteps_;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -31,5 +34,16 @@ public class BasicController : MonoBehaviour
         anim.SetBool("Walk", horizontalMovement != 0 ? true : false);
         flip = horizontalMovement == 1 ? false : horizontalMovement == -1 ? true : flip;
         anim.GetComponent<SpriteRenderer>().flipX = flip;
+    }
+    public void LeftStep()
+    {
+        int rand = Random.Range(0, leftSteps_.Count);
+        sfx_.PlayOneShot(leftSteps_[rand], 1);
+    }
+
+    public void RightStep()
+    {
+        int rand = Random.Range(0, rightSteps_.Count);
+        sfx_.PlayOneShot(rightSteps_[rand], 1);
     }
 }
