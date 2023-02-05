@@ -28,6 +28,7 @@ public class SlimeBehaviour : MonoBehaviour {
     if(collider.gameObject.GetComponent<IDamageable>() != null){
       collider.gameObject.GetComponent<IDamageable>().TakeDamage();
       gameObject.SetActive(false);
+      spawnManagerRef_.spawnedSlimes_--;
     }
   }
 }
