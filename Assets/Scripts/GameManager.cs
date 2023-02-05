@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using UnityEngine.Events;
 
@@ -18,8 +19,8 @@ public class GameManager : MonoBehaviour {
 
 
     [Header("Fungis life")]
-    [SerializeField] private int fungiLifes = 5;
-    [SerializeField] private int fungiSisterLifes = 5;
+    [SerializeField] private List<GameObject> fungiLifes;
+    [SerializeField] private List<GameObject> fungiSisterLifes;
     [SerializeField,Space(10)]private int enemyDefeatCount;
     [SerializeField] private int maxVitaminas=5;
     [SerializeField] private UnityEvent OnEndGame;
@@ -55,15 +56,21 @@ public class GameManager : MonoBehaviour {
     }
     public void FungiDamage()
     {
-        if (fungiLifes > 1)
-            fungiLifes--;
+        if (fungiLifes.Count > 1)
+        {
+            fungiLifes[fungiLifes.Count - 1].SetActive(false);
+            fungiLifes.RemoveAt(fungiLifes.Count - 1);
+        }
         else
             GameOver = true;
     }
     public void FungiSisterDamage()
     {
-        if (fungiSisterLifes > 1)
-            fungiSisterLifes--;
+        if (fungiSisterLifes.Count > 1)
+        {
+            fungiSisterLifes[fungiSisterLifes.Count - 1].SetActive(false);
+            fungiSisterLifes.RemoveAt(fungiSisterLifes.Count - 1);
+        }
         else
             GameOver = true;
     }
