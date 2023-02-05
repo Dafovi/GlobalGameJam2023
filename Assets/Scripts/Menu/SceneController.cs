@@ -8,6 +8,8 @@ public class SceneController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
     }
     public void ChangeScene(string _sceneName)
     {
