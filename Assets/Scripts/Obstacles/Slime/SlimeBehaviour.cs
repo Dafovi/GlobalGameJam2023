@@ -16,10 +16,6 @@ public class SlimeBehaviour : MonoBehaviour {
     slimeDirection_ = spawnManagerRef_.spawnDirection_;
   }
 
-  void OnDisable(){
-    spawnManagerRef_.spawnedSlimes_--;
-  }
-
   void Update() {
     GetComponent<SpriteRenderer>().flipX = slimeDirection_ < 0 ? false :  true;
     if(anim_.GetCurrentAnimatorStateInfo(0).IsName("SlimeWalking")){

@@ -10,16 +10,20 @@ public class SlimeSpawnManager : MonoBehaviour {
 
   private Vector3 spawnPosition_;
   public int spawnDirection_;
-  public int spawnedSlimes_;
 
   void Start() {
     slimePoolRef_ = GetComponent<GenericPool>();
-    GameManager.Instance.EnemyHit += SetSlimeSpawn;
+    // GameManager.Instance.EnemyHit += SetSlimeSpawn;
+  }
+
+  void Update(){
+    if(Input.GetButtonDown("Jump"))
+      SetSlimeSpawn();
   }
 
   void SetSlimeSpawn(){
-    if(spawnedSlimes_ <= 0) spawnedSlimes_ = 0;
-    if(spawnedSlimes_ < slimePoolRef_.pool_.Count){
+    // int spawn = Random.Range(0, 15 - GameManager.Instance.currentDifficulty_);
+    // if(spawn == 0){
       switch(Random.Range(0, 2)){
         case 0: 
           spawnPosition_ = leftSpawn_.transform.position;
@@ -30,9 +34,8 @@ public class SlimeSpawnManager : MonoBehaviour {
           spawnDirection_ = -1;
           break;
       }
-      spawnedSlimes_++;
       slimePoolRef_.GetFromPool(spawnPosition_);
-    }
+    // }
   }
 
 

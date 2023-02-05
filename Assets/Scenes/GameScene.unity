@@ -479,17 +479,17 @@ GameObject:
   m_Component:
   - component: {fileID: 83153357}
   - component: {fileID: 83153356}
-  - component: {fileID: 83153360}
   - component: {fileID: 83153361}
   - component: {fileID: 83153362}
   - component: {fileID: 83153363}
+  - component: {fileID: 83153364}
   m_Layer: 0
   m_Name: SisterFungi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &83153356
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 375691478, guid: 2dbe0e3de2e05854b8de1d1af356b3d6, type: 3}
+  m_Sprite: {fileID: -443504747, guid: 4854f66f134696843838091411ef6ae2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -550,29 +550,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83153355}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.92, y: -3.75, z: 0}
+  m_LocalPosition: {x: 1.92, y: -5.41, z: 0}
   m_LocalScale: {x: 0.5, y: 0.6, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!70 &83153360
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 83153355}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1.9999999}
-  m_Direction: 0
 --- !u!50 &83153361
 Rigidbody2D:
   serializedVersion: 4
@@ -629,6 +613,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &83153364
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83153355}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!1 &105739963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1905,6 @@ MonoBehaviour:
   leftSpawn_: {fileID: 1250303750}
   rightSpawn_: {fileID: 1872164911}
   spawnDirection_: 0
-  spawnedSlimes_: 0
 --- !u!114 &885311085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3594,7 +3593,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2080306815032338172, guid: 7addd421d66905f4aa7976fc533ac0da, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.92
+      value: -5.98
       objectReference: {fileID: 0}
     - target: {fileID: 2080306815032338172, guid: 7addd421d66905f4aa7976fc533ac0da, type: 3}
       propertyPath: m_LocalPosition.z

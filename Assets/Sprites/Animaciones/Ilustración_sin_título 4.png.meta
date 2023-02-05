@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,280 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_0"
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 732
+        width: 324
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6787fdd1e54847488d7f9036f8e6ca4
+      internalID: -443504747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_1"
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 718
+        width: 307
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 060899cad386b9543b054841e12d743e
+      internalID: 83397532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_2"
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 753
+        width: 326
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c893c18565f73464eb21cbcb564103bb
+      internalID: -63333079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_3"
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 765
+        width: 329
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b0ed1de088157043875e2a11123ba58
+      internalID: -1480697597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_4"
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 717
+        width: 339
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139df9e342f5a4443805dcfb9969ee4f
+      internalID: -2011011369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_5"
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 354
+        width: 346
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d0dc5aaa8ce474b81ef5537b8238a5
+      internalID: -1817001514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_6"
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 357
+        width: 344
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8554b98517b869e40b2c160a804a69ca
+      internalID: -1068554231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_7"
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 359
+        width: 343
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8210ade8e4f1fd94db556255affa97d5
+      internalID: -1011195923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_8"
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 361
+        width: 345
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9173737b7ca9c649a6e54e2e7db1752
+      internalID: -314196205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_9"
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 43
+        width: 333
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907539a7ac1d8da41865844356d702a9
+      internalID: -1067446033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_10"
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 56
+        width: 320
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4117d4d3274d31546b3aa51883aca759
+      internalID: 1959641744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_11"
+      rect:
+        serializedVersion: 2
+        x: 1046
+        y: 47
+        width: 319
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4fe911e9c23d043bc9213152264adf
+      internalID: 2026216278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Ilustracio\u0301n_sin_ti\u0301tulo 4_12"
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 27
+        width: 323
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27eaacbede18cb942afa4456353a9cb7
+      internalID: -473166890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +399,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_11": 2026216278
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_5": -1817001514
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_7": -1011195923
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_12": -473166890
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_2": -63333079
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_1": 83397532
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_0": -443504747
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_9": -1067446033
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_4": -2011011369
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_6": -1068554231
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_3": -1480697597
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_10": 1959641744
+      "Ilustracio\u0301n_sin_ti\u0301tulo 4_8": -314196205
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
