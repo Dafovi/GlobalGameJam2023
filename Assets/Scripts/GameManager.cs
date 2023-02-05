@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private List<Sprite> backgrounds;
     [SerializeField] private SpriteRenderer bg;
 
+    [Header("LoseScreens")]
+    [SerializeField] private GameObject hongo;
+    [SerializeField] private GameObject honga;
+
 
     private int currentVitaminas;
     public bool GameOver {get; set;}
@@ -66,8 +70,10 @@ public class GameManager : MonoBehaviour {
         }
         else
         {
+            hongo.SetActive(true);
             fungiLifes[0].SetActive(false);
             GameOver = true;
+            StartCoroutine(SceneController.Instance.ChangeSceneDelay(2f, "IntialScene"));
         }
     }
     public void FungiSisterDamage()
@@ -79,8 +85,10 @@ public class GameManager : MonoBehaviour {
         }
         else
         {
+            honga.SetActive(true);
             fungiSisterLifes[0].SetActive(false);
             GameOver = true;
+            StartCoroutine(SceneController.Instance.ChangeSceneDelay(2f, "IntialScene"));
         }
     }
     public void AddAnimationCount()

@@ -6,8 +6,7 @@ public class RootSpawnerManager : MonoBehaviour {
     [SerializeField] private int maxAnimationCount = 10;
     [SerializeField] private SpriteRenderer root1;
     [SerializeField] private SpriteRenderer root2;
-    [SerializeField] private List<Sprite> _root1;
-    [SerializeField] private List<Sprite> _root2;
+    [SerializeField] private List<Sprite> _rootAnim;
     [SerializeField] private Transform root1Spwan;
     [SerializeField] private Transform root2Spwan;
 
@@ -26,8 +25,8 @@ public class RootSpawnerManager : MonoBehaviour {
 
         rootCountToInstace = maxAnimationCount;
         currentRoot = addRoot;
-        root1.sprite = _root1[currentRoot];
-        root2.sprite = _root2[currentRoot];
+        root1.sprite = _rootAnim[currentRoot];
+        root2.sprite = _rootAnim[currentRoot];
         AddTO = Random.Range(0, 2);
     }
     private void UpdateDifficult()
@@ -51,15 +50,15 @@ public class RootSpawnerManager : MonoBehaviour {
         addRoot+=value;
         if (AddTO == 0)
         {
-            currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _root1.Count - 1);
+            currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _rootAnim.Count - 1);
             if(currentRoot >=  0)
-                root1.sprite = _root1[currentRoot];
+                root1.sprite = _rootAnim[currentRoot];
         }
         else
         {
-            currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _root2.Count - 1);
+            currentRoot = (int)GameManager.Remap(addRoot, 0, rootCountToInstace, 0, _rootAnim.Count - 1);
             if(currentRoot >=  0)
-                root2.sprite = _root2[currentRoot];
+                root2.sprite = _rootAnim[currentRoot];
         }
     }
     void SetSpawnVitamin(){

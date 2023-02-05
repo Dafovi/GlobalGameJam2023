@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    public static SceneController Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         Time.timeScale = 1;
@@ -18,5 +23,14 @@ public class SceneController : MonoBehaviour
     public void Exit()
     {
         Application.Quit();
+    }
+    public void ChangeSeceneToLose(string _sceneName)
+    {
+        StartCoroutine(ChangeSceneDelay(2f, _sceneName));
+    }
+    public IEnumerator ChangeSceneDelay(float _time,string _sceneName)
+    {
+        yield return new WaitForSeconds(_time);
+        SceneManager.LoadScene(_sceneName);
     }
 }

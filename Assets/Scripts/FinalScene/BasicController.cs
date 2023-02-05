@@ -23,11 +23,8 @@ public class BasicController : MonoBehaviour
     }
     private void Movement()
     {
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Transform"))
-        {
-            horizontalMovement = Input.GetAxisRaw("Horizontal");
-        }
-            rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
+        horizontalMovement = Input.GetAxisRaw("Horizontal");
+        rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
     }
     private void MoveAnim()
     {

@@ -28,6 +28,7 @@ public class FungiController : MonoBehaviour
         {
             horizontalMovement = Input.GetAxisRaw("Horizontal");
         }
+        else horizontalMovement = 0;
 
         rb.velocity = new Vector2(horizontalMovement * speed, rb.velocity.y);
     }
