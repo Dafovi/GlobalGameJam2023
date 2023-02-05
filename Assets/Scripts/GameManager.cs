@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
     public bool GameOver {get; set;}
     public int EnemiesCount {get; set;}
 
-    private AudioSource sfx_;
+    [SerializeField] private AudioSource sfx_;
     public AudioSource Sfx_ { get=>sfx_; set=>sfx_ = value; } 
 
     [SerializeField] private AudioClip vitaminaAudioClip_;
