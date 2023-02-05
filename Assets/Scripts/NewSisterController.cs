@@ -12,18 +12,23 @@ public class NewSisterController : MonoBehaviour, IDamageable {
   private bool isLocked_ = false;
 
   [SerializeField, Range(1.0f, 10.0f)] private float sisteSpeed_;
+    private Animator anim;
 
   void Start(){
     activeAcidList_ = new List<GameObject>();
     acidManager_.SearchAcidAction += SearchForTarget;
+        anim = GetComponent<Animator>();
   }
 
   void Update(){
     if(isLocked_){
       transform.position = Vector3.MoveTowards(transform.position, acidPosition_, sisteSpeed_ * Time.deltaTime);
+            anim.SetBool("Walk", true);
+            GetComponent<SpriteRenderer>().flipX = transform.position.x < acidPosition_.x ? false : true;
       if(Vector3.Distance(transform.position, acidPosition_) < 0.1f){
         isLocked_ = false;
-      }
+                anim.SetBool("Walk", false);
+            }
     }
 
     if(acidRef_ != null && !acidRef_.gameObject.activeInHierarchy){

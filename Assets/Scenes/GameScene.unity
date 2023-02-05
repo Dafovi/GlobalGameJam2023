@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 83153360}
   - component: {fileID: 83153361}
   - component: {fileID: 83153362}
+  - component: {fileID: 83153363}
   m_Layer: 0
   m_Name: SisterFungi
   m_TagString: Untagged
@@ -417,7 +418,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 375691478, guid: 2dbe0e3de2e05854b8de1d1af356b3d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -495,6 +496,26 @@ MonoBehaviour:
   acidManager_: {fileID: 132572646}
   activeAcidList_: []
   sisteSpeed_: 3
+--- !u!95 &83153363
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83153355}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 09f44f3456c991345a0ed726bc7ceacb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &105739963
 GameObject:
   m_ObjectHideFlags: 0
