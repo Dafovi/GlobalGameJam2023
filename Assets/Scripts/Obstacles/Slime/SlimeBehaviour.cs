@@ -7,6 +7,8 @@ public class SlimeBehaviour : MonoBehaviour {
   private int slimeDirection_;
   private Animator anim_;
 
+  [SerializeField] private AudioClip moveClip_;
+
   void Awake() {
     anim_ = GetComponent<Animator>();
     spawnManagerRef_ = FindObjectOfType<SlimeSpawnManager>();
@@ -29,5 +31,9 @@ public class SlimeBehaviour : MonoBehaviour {
       collider.gameObject.GetComponent<IDamageable>().TakeDamage();
       gameObject.SetActive(false);
     }
+  }
+
+  public void Move(){
+    GameManager.Instance.Sfx_.PlayOneShot(moveClip_, 1);
   }
 }

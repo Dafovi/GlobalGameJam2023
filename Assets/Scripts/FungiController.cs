@@ -11,6 +11,10 @@ public class FungiController : MonoBehaviour
     private Animator anim;
     private float horizontalMovement;
     private bool flip;
+
+    [SerializeField] private List<AudioClip> leftSteps_;
+    [SerializeField] private List<AudioClip> rightSteps_;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -107,5 +111,15 @@ public class FungiController : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void LeftStep(){
+      int rand = Random.Range(0, leftSteps_.Count);
+      GameManager.Instance.Sfx_.PlayOneShot(leftSteps_[rand], 1);
+    }
+
+    public void RightStep(){
+      int rand = Random.Range(0, rightSteps_.Count);
+      GameManager.Instance.Sfx_.PlayOneShot(rightSteps_[rand], 1);
     }
 }

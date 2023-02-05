@@ -48,7 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe58849bd4d4031418ea2b41baf2819a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
+  leftSteps_:
+  - {fileID: 8300000, guid: 3457e2c5bd6c94147bc68b546fbd37f3, type: 3}
+  - {fileID: 8300000, guid: 4f1946f406832e943b3417337b9a6b6f, type: 3}
+  - {fileID: 8300000, guid: 5e86f1e1bd72c9a488424ef360e13520, type: 3}
+  rightSteps_:
+  - {fileID: 8300000, guid: d8ff3093c005f34458ece73e363d37a5, type: 3}
+  - {fileID: 8300000, guid: c361830af2cad5e42b5d80319f8cd289, type: 3}
+  - {fileID: 8300000, guid: 4b9d39208b1c94e479d012e5b5f19a97, type: 3}
 --- !u!50 &2080306815032338174
 Rigidbody2D:
   serializedVersion: 4
@@ -126,7 +134,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 1570484142, guid: 12968fb81b2bacc429c8401190a0717a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

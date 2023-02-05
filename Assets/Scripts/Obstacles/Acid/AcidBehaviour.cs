@@ -7,6 +7,8 @@ public class AcidBehaviour : MonoBehaviour {
   private Rigidbody2D rb_;
     private CircleCollider2D collider2d;
 
+    [SerializeField] private AudioClip splashClip_;
+
     private void Awake()
     {
         collider2d = GetComponent<CircleCollider2D>();
@@ -28,6 +30,7 @@ public class AcidBehaviour : MonoBehaviour {
     }
         if (collider.CompareTag("Ground"))
         {
+            GameManager.Instance.Sfx_.PlayOneShot(splashClip_, 1);
             GameManager.Instance.AddDificult();
             GetComponent<Animator>().SetTrigger("Splash");
             rb_.gravityScale = 0.0f;

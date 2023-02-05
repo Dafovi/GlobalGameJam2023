@@ -14,6 +14,8 @@ public class NewSisterController : MonoBehaviour, IDamageable {
   [SerializeField, Range(1.0f, 10.0f)] private float sisteSpeed_;
     private Animator anim;
 
+    [SerializeField] private List<AudioClip> sisterAudio_;
+
   void Start(){
     activeAcidList_ = new List<GameObject>();
     acidManager_.SearchAcidAction += SearchForTarget;
@@ -86,6 +88,11 @@ public class NewSisterController : MonoBehaviour, IDamageable {
 
             yield return null;
         }
+    }
+
+    public void Move(){
+      int rand = Random.Range(0, sisterAudio_.Count);
+      GameManager.Instance.Sfx_.PlayOneShot(sisterAudio_[rand], 1);
     }
 
 }
