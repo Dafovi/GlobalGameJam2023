@@ -62,7 +62,10 @@ public class GameManager : MonoBehaviour {
             fungiLifes.RemoveAt(fungiLifes.Count - 1);
         }
         else
+        {
+            fungiLifes[0].SetActive(false);
             GameOver = true;
+        }
     }
     public void FungiSisterDamage()
     {
@@ -72,7 +75,10 @@ public class GameManager : MonoBehaviour {
             fungiSisterLifes.RemoveAt(fungiSisterLifes.Count - 1);
         }
         else
+        {
+            fungiSisterLifes[0].SetActive(false);
             GameOver = true;
+        }
     }
     public void AddAnimationCount()
     {
