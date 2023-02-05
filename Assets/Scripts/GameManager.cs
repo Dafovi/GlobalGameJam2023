@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour {
             hongo.SetActive(true);
             fungiLifes[0].SetActive(false);
             GameOver = true;
-            StartCoroutine(SceneController.Instance.ChangeSceneDelay(2f, "IntialScene"));
+            StartCoroutine(SceneController.Instance.ChangeSceneDelay(3f, "IntialScene"));
         }
     }
     public void FungiSisterDamage()
@@ -88,7 +88,7 @@ public class GameManager : MonoBehaviour {
             honga.SetActive(true);
             fungiSisterLifes[0].SetActive(false);
             GameOver = true;
-            StartCoroutine(SceneController.Instance.ChangeSceneDelay(2f, "IntialScene"));
+            StartCoroutine(SceneController.Instance.ChangeSceneDelay(3f, "IntialScene"));
         }
     }
     public void AddAnimationCount()

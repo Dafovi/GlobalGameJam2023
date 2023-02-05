@@ -17,7 +17,7 @@ public class MainMenu : MonoBehaviour {
     void Update(){
 
         gameOverCanvas.SetActive(GameManager.Instance.GameOver);
-        Time.timeScale = GameManager.Instance.GameOver? 0 : Convert.ToInt32(!pauseMenu.activeSelf);
+        Time.timeScale = Convert.ToInt32(!pauseMenu.activeSelf);
 
         if (!gameOverCanvas.activeSelf)
         {
