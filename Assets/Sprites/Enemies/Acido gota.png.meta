@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 99b6c63d6b981db49ab2e819c406b3a9
+guid: 40c11d17cd9a43f47a1bfb8dfc047f07
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -101,9 +101,483 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Acido gota_0
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 967
+        width: 45
+        height: 12
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ce5756c3d66dd408dc3dfdb0a59cda
+      internalID: -1157886539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_1
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 959
+        width: 51
+        height: 20
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0120fc8335fe78444a81af2983a88538
+      internalID: -962577121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_2
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 954
+        width: 67
+        height: 32
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c009ef874ae9474e97f21107762d3fe
+      internalID: 1539071106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_3
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 948
+        width: 77
+        height: 41
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c16e11559f03414bae67021b25566e9
+      internalID: 24197318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_4
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 932
+        width: 80
+        height: 54
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d207f095324d8044a907d42f4dd94518
+      internalID: -903386932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_5
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 917
+        width: 75
+        height: 71
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b0ea8abf6c06f4f8f035822b4501c9
+      internalID: -1284559260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_6
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 896
+        width: 68
+        height: 85
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3591f2a43956194b82707dff56502d6
+      internalID: 959568591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_7
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 877
+        width: 66
+        height: 105
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10cf0b00e53c314f84c01ac2a207704
+      internalID: 1770946645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_8
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 865
+        width: 63
+        height: 118
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94ea3a2a9053da4d883576601266a8c
+      internalID: -855860852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_9
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 845
+        width: 58
+        height: 133
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86e7919bd2bd944986e9ef6ce05429a
+      internalID: 1592757003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_10
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 845
+        width: 61
+        height: 136
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602f6339f30a7c945a9d301f1f2a59e9
+      internalID: -859726775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_11
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 837
+        width: 59
+        height: 143
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78e4fb4bbb87a14284b715dd993f253
+      internalID: 1799102143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_12
+      rect:
+        serializedVersion: 2
+        x: 1737
+        y: 827
+        width: 59
+        height: 150
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7e60c3f19608042905d2db4757f0f9
+      internalID: 180594112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_13
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 562
+        width: 59
+        height: 194
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4b56a8383511b408672a8104169ba2
+      internalID: -1393250938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_14
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 487
+        width: 59
+        height: 239
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb21433ac5da45a40bab3c03feccea86
+      internalID: -22354609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_15
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 463
+        width: 59
+        height: 239
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea2ca04fd91c5242b93e26254c70f2e
+      internalID: 1497593502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_16
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 445
+        width: 59
+        height: 185
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896cbb6a42b4ac24e8e45f1513087596
+      internalID: -1991653173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_17
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 538
+        width: 164
+        height: 185
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7b77d3b726b1c48a9e2e197040f778
+      internalID: -1164939422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_20
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 521
+        width: 336
+        height: 185
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6bea36d785784c46a41dab073426eb3
+      internalID: -1300383641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_29
+      rect:
+        serializedVersion: 2
+        x: 1539
+        y: 520
+        width: 357
+        height: 185
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d941a876f50c6f5438f1cf95e1f3ffae
+      internalID: -284933097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_43
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 245
+        width: 377
+        height: 185
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5634b3eeb7cf5e4e8177dd1550efc00
+      internalID: -29163573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acido gota_51
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 250
+        width: 376
+        height: 185
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed3563e9577c2014f98c5a578543aafe
+      internalID: -2047856208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -114,7 +588,59 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Acido gota_27: -2099112378
+      Acido gota_2: 1539071106
+      Acido gota_48: 1000457649
+      Acido gota_29: -284933097
+      Acido gota_43: -29163573
+      Acido gota_19: -1187354960
+      Acido gota_7: 1770946645
+      Acido gota_25: -1943194089
+      Acido gota_50: -1007867079
+      Acido gota_46: 1795881174
+      Acido gota_47: 582791587
+      Acido gota_36: -765269460
+      Acido gota_30: -351048354
+      Acido gota_14: -22354609
+      Acido gota_17: -1164939422
+      Acido gota_26: 809630138
+      Acido gota_21: 629574334
+      Acido gota_41: -1344982365
+      Acido gota_12: 180594112
+      Acido gota_1: -962577121
+      Acido gota_31: -1650852038
+      Acido gota_33: 367863614
+      Acido gota_34: -906146668
+      Acido gota_10: -859726775
+      Acido gota_0: -1157886539
+      Acido gota_3: 24197318
+      Acido gota_11: 1799102143
+      Acido gota_9: 1592757003
+      Acido gota_40: -1928877375
+      Acido gota_23: 1810985457
+      Acido gota_32: -403039632
+      Acido gota_37: 1356644655
+      Acido gota_38: 12980244
+      Acido gota_15: 1497593502
+      Acido gota_4: -903386932
+      Acido gota_20: -1300383641
+      Acido gota_45: -961954367
+      Acido gota_39: 1904252284
+      Acido gota_5: -1284559260
+      Acido gota_44: 1848311204
+      Acido gota_13: -1393250938
+      Acido gota_16: -1991653173
+      Acido gota_42: 925262252
+      Acido gota_8: -855860852
+      Acido gota_51: -2047856208
+      Acido gota_22: 1323627382
+      Acido gota_18: -832645616
+      Acido gota_49: -909160769
+      Acido gota_35: -1728146397
+      Acido gota_24: 2027676545
+      Acido gota_28: -1627325308
+      Acido gota_6: 959568591
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
