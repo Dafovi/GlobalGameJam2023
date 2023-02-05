@@ -58,8 +58,34 @@ public class NewSisterController : MonoBehaviour, IDamageable {
     }
   }
 
-  public void TakeDamage(){
-    GameManager.Instance.FungiSisterDamage();
-  }
+    public void TakeDamage(){
+        GameManager.Instance.FungiSisterDamage();
+        StartCoroutine(DamageAnim());
+    }
+    IEnumerator DamageAnim()
+    {
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        float t = 0;
+        float speed = 10f;
+        bool growing = false;
+        int rounds = 0;
+        bool ready = false;
+        while (true)
+        {
+            t = Mathf.Clamp01(t + Time.deltaTime * speed * (growing ? -1 : 1));
+            if (t == 1 || t == 0) { growing = !growing; rounds++; }
+
+            sprite.color = new Color(255, 255, 255, t);
+
+            if (rounds >= 4) ready = true;
+            if (ready)
+            {
+                sprite.color = new Color(255, 255, 255, 1);
+                yield return false;
+            }
+
+            yield return null;
+        }
+    }
 
 }
